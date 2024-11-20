@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DataComponent } from './data/data.component';
+import { SingInComponent } from './sing-in/sing-in.component';
+import { SingUpComponent } from './sing-up/sing-up.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:"data" ,component:DataComponent},
+  {path:"signin" ,component:SingInComponent},
+  {path:"signup" ,component:SingUpComponent},
+  {path:"" ,redirectTo:"data", pathMatch:"full"},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
