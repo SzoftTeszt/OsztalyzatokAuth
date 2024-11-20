@@ -1,1 +1,27 @@
-<p>data works!</p>
+<p>Adatok:</p>
+{{adatok|json}}
+<div class="row my-3 ">
+    <div class="col">
+        <input [(ngModel)]="newName" type="text" class="form-control" >
+    </div>
+    <div class="col">
+        <input [(ngModel)]="newGrade" type="number" class="form-control" >
+    </div>
+    <div class="col">
+                <button type="button" (click)="pushData()" class="btn btn-primary">Push</button>
+    </div>
+</div>
+
+
+<div *ngFor="let adat of adatok" class="row">
+    <div class="col">
+        <input [(ngModel)]="adat.name" type="text" class="form-control" >
+    </div>
+    <div class="col">
+        <input [(ngModel)]="adat.grade" type="number" class="form-control" >
+    </div>
+    <div class="col">
+        <button type="button" (click)="updateData(adat)" class="btn btn-primary">Update</button>
+        <button type="button" (click)="deleteData(adat)" class="btn btn-primary">Delete</button>
+    </div>
+</div>

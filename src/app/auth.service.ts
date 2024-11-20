@@ -10,7 +10,7 @@ export class AuthService {
   private userSub= new Subject()
 
   constructor(private afAuth:AngularFireAuth) { 
-    
+
     this.afAuth.authState.subscribe(
       (user:any)=>{
         if (user) {
