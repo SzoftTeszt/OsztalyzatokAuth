@@ -35,7 +35,7 @@ export class SingInComponent {
     this.auth.signInEmailPassword(this.email, this.password).then(
       ()=>this.router.navigate(['data'])
     ).catch(
-      (error)=>{
+      (error:any)=>{
           this.mailRegError=true
           this.mailRegText=error
       }

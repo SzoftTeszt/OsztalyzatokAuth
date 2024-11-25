@@ -26,9 +26,13 @@ export class SingUpComponent {
   }
 
   signUpMailPassword(){
-    this.auth.signUpEmailPassword(this.email, this.password).then(
-      ()=>this.router.navigate(['data'])
-    ).catch(
+    this.auth.signUpEmailPassword(this.email, this.password)
+    .then(()=> this.auth.sendVerificationEmail())
+    .then( ()=> this.auth.signOut() )
+    .then( () =>this.router.navigate(['signin']))
+    // .then(
+    //   ()=>this.router.navigate(['data']))
+    .catch(
       (error)=>{
           this.mailRegError=true
           this.mailRegText=error

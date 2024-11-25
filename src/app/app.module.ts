@@ -13,6 +13,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     SingInComponent,
     SingUpComponent,
     DataComponent,
-    NavbarComponent
+    NavbarComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
