@@ -14,6 +14,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { UsersComponent } from './users/users.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     SingUpComponent,
     DataComponent,
     NavbarComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

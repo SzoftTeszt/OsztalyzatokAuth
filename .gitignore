@@ -10,7 +10,14 @@
 /node_modules
 npm-debug.log
 yarn-error.log
-
+# Firebase 
+functions/osztalyzatokauth-firebase-adminsdk-rjj4i-7ce9439289.json
+src/environments/
+src/environments/environment.prod.ts
+src/environments/environment.ts
+functions/node_modules/
+firebase.json
+.firebaserc
 # IDEs and editors
 .idea/
 .project
